@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>家計簿管理サイト|kakerubo-kakeruboについて</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="家計簿を手軽に、詳細に管理するウェブサイトkakerubo 
+    自分の使いやすいようにアレンジしたり、設定によって使いすぎを防止したり…… あなたの生活をきっとより便利に、豊かにするシステムです。">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slide.css">
+	<script src="js/openclose.js"></script>
+	<script src="js/fixmenu.js"></script>
+	<script src="js/fixmenu_pagetop.js"></script>
+	<script src="js/ddmenu_min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="container">
+
+		<header>
+			<h1 id="logo"><a v-bind:href="myURL"><img v-bind:src="fileName"></a></h1>
+
+			<script>
+				new Vue({
+					el: "#logo",
+					data: {
+						fileName: "images/logo.png",
+						myURL: "index.html"
+					}
+				})
+			</script>
+		</header>
+
+		<!--PC用（801px以上端末）メニュー-->
+		<nav id="menubar" class="nav-fix-pos">
+			<ul class="inner">
+				<li><a href="index.html">HOME<span>ホーム</span></a></li>
+				<li><a href="about.html">ABOUT<span>当サイトについて</span></a></li>
+				<li><a href="javascript:void(0)" class="cursor-default">MANAGE<span>家計簿の管理</span></a>
+					<ul class="ddmenu">
+						<li><a href="howtouse.html">家計簿の使い方</a></li>
+						<li><a href="create.php">家計簿の新規作成</a></li>
+						<li><a href="search.php">家計簿の検索</a></li>
+					</ul>
+				</li>
+				<li><a href="setting.php">SETTING<span>基本設定</span></a></li>
+				<li><a href="help.html">HELP<span>ヘルプ</span></a></li>
+			</ul>
+		</nav>
+
+		<!--小さな端末用（800px以下端末）メニュー-->
+		<nav id="menubar-s">
+			<ul>
+				<li><a href="index.html">HOME<span>ホーム</span></a></li>
+				<li><a href="about.html">ABOUT<span>当サイトについて</span></a></li>
+				<li><a href="javascript:void(0)" class="cursor-default">MANAGE<span>家計簿の管理</span></a>
+					<ul class="ddmenu">
+						<li><a href="howtouse.html">家計簿の使い方</a></li>
+						<li><a href="create.php">家計簿の新規作成</a></li>
+						<li><a href="search.php">家計簿の検索</a></li>
+					</ul>
+				</li>
+				<li><a href="setting.php">SETTING<span>基本設定</span></a></li>
+				<li><a href="help.html">HELP<span>ヘルプ</span></a></li>
+			</ul>
+		</nav>
+
+		<div id="contents">
+
+			<div class="inner">
+
+				<section>
+
+					<h2>ABOUT<span>当サイトkakeruboについて</span></h2>
+
+					<h3>このウェブサイトの概要</h3>
+					<p><strong
+							class="color1">・家計簿って、正直書面で管理するとめんどくさい……<br>・かといってPCで作ってみようと思ったけど上手くできる気がしない…</strong><br>
+						そんな方に向けて、入力するだけで自動で管理し、数多くの機能が利用できるウェブサイトを作りました！<br>
+						ジャンルごとの分類や合計金額の算出等の基本的なものはもちろん、月ごと、ジャンルごとの平均金額と比較して使いすぎを防止したり、節約できそうな部分を見つけたり、残り金額に応じたプランを提案したりします。<br>
+						<strong class="color1">当ウェブサイトは、あなたの無駄のない、最適なお金の管理を全力でサポートします！</strong>
+					</p>
+
+					<h3>kakerubo名前の由来</h3>
+					<p>家計簿のローマ字表記である<strong class="color1">kakeibo</strong>と、書く気がなかなか起きない家計簿をもっと書きやすく、誰でも簡単に<strong
+							class="color1">書ける(kakeru)</strong>
+						ようになってほしいという願いから、<strong class="color1">kakerubo</strong>が生まれました。<br>
+						kakeruboは、「書いたほうが良いのはわかってるけどなぁ……」という億劫な気持ちを、「あっ、書いておこう」という気軽な気持ちに変えるお手伝いをします。
+					</p>
+
+					<h3>kakeruboでできること</h3>
+					<ul class="disc">
+						<li>家計簿の作成(複数作成することができます)</li>
+						<li>家計簿への入力(フォーマットがあるので簡単に入力できます)</li>
+						<li>家計簿の編集</li>
+						<li>家計簿の閲覧</li>
+						<li>月ごとや年ごとの目標金額の設定</li>
+						<li>品目等、家計簿ごとの詳細設定</li>
+						<li>家計簿の分析</li>
+						etc...
+					</ul>
+
+					<h3>※なぜ無償で使えるのか？</h3>
+					<p>どうしてもタダほど怖いものはないというように、無償のプログラムは何か裏があるんじゃないかと不安に思う人もいるのではないでしょうか。そこで、一応その理由について少しお話しておこうと思います。<br>
+						しかし理由は単純で、プログラミングを学習中の学生が、その学習の一環で開発したプログラムだから無償で使えるのです。目的が「経験」であり、
+						<strong class="color1">商業的な理由で作られたウェブサイトではない</strong>ということを覚えておいてもらえればと思います。<br>
+						皆様の生活を、少しでも便利にできることを願っております。
+					</p>
+
+				</section>
+
+
+			</div>
+			<!--/.inner-->
+
+		</div>
+		<!--/#contents-->
+
+		<footer>
+
+			<div id="footermenu" class="inner">
+				<ul>
+					<li class="title">タイトル</li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+				</ul>
+				<ul>
+					<li class="title">タイトル</li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+				</ul>
+				<ul>
+					<li class="title">タイトル</li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+				</ul>
+				<ul>
+					<li class="title">タイトル</li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+					<li><a href="#">メニューサンプル</a></li>
+				</ul>
+			</div>
+			<!--/#footermenu-->
+
+			<div id="copyright">
+				<ul class="icon">
+					<li><a href="#"><img src="images/icon_facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
+					<li><a href="#"><img src="images/icon_instagram.png" alt="Instagram"></a></li>
+					<li><a href="#"><img src="images/icon_youtube.png" alt="TouTube"></a></li>
+				</ul>
+				<small>Copyright&copy; <a href="index.html">Masato Katogi</a> All Rights Reserved.</small>
+				<span class="pr"><a href="https://template-party.com/" target="_blank">《Web
+						Design:Template-Party》</a></span>
+			</div>
+			<!--/#copyright-->
+
+		</footer>
+
+	</div>
+	<!--/#container-->
+
+	<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+	<!--メニュー開閉ボタン-->
+	<div id="menubar_hdr" class="close"></div>
+
+	<!--メニューの開閉処理-->
+	<script>
+		open_close("menubar_hdr", "menubar-s");
+	</script>
+
+	<!--「WORKS」の子メニュー-->
+	<script>
+		open_close("menubar_hdr2", "menubar-s2");
+	</script>
+
+</body>
+
+</html>
