@@ -9,10 +9,10 @@ $password = "";
 $dbname = "kakerubo";
 $host = "localhost:3306";
 $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8";
-if(isSet($_COOKIE["default"]) || $_COOKIE["default"] == "true"){
-	$defaultPass = $_COOKIE["defaultPass"];
-} else {
+if(isSet($_COOKIE["default"]) || !$_COOKIE["default"] == "true"){
 	$defaultPass = "";
+} else {
+	$defaultPass = $_COOKIE["defaultPass"];
 }
 ?>
 
