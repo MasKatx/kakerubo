@@ -6,10 +6,10 @@
 		echo "<p class='c' style='color:#FF5555'>$error</p>";
 	}
 	// デフォルトの家計簿がある場合は値をセット
-	if(isSet($_COOKIE["default"]) || $_COOKIE["default"] == "true"){
-		$defaultID = $_COOKIE["defaultID"];
-	} else {
+	if(isSet($_COOKIE["default"]) || !$_COOKIE["default"] == "true"){
 		$defaultID = "";
+	} else {
+		$defaultID = $_COOKIE["defaultID"];
 	}
 ?>
 
